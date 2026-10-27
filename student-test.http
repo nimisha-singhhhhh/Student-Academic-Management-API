@@ -1,0 +1,40 @@
+
+```http
+### Update student 104
+PUT http://localhost:8080/students/104
+Content-Type: application/json
+
+{
+  "studentId": 104,
+  "name": "Amit Sharma",
+  "email": "amitsharma@kiet.edu",
+  "branch": "CSE-AI",
+  "year": 2,
+  "cgpa": 9.1
+}
+### Question 4 - Add a student
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{
+  "studentId": 106,
+ "name": "Amit Kumar",
+  "email": "amit@kiet.edu",
+ "branch": "CSE(AI)",
+ "year": 2,
+  "cgpa": 8.75
+}
+
+### Get all students
+GET http://localhost:8080/students
+
+### Get student by ID
+GET http://localhost:8080/students/104
+### Delete student 104
+DELETE http://localhost:8080/students/104
+### Question 6A - Search by Branch and Year
+GET http://localhost:8080/students/search?branch=CSE&year=2
+
+
+### Question 6B - Find students by minimum CGPA
+GET http://localhost:8080/students/topper?cgpa=9.0
